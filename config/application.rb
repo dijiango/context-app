@@ -13,9 +13,9 @@ module Context
 
     config.api_only = true
 
-    config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::Cookiestore
+  #   config.middleware.use ActionDispatch::Cookies
+  #   config.middleware.use ActionDispatch::Session::Cookiestore
 
-    config.action_dispatch.cookies_same_site_protection = :strict
+  #   config.action_dispatch.cookies_same_site_protection = :strict
   end
 end

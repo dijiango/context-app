@@ -28,6 +28,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
+gem 'rack-cors'
 
 gem 'active_model_serializers', '~> 0.10.2'
 
