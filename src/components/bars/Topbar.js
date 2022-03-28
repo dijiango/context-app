@@ -1,6 +1,19 @@
 import { TopbarWrapper, TopbarText, LeftRoutes } from './Topbar.styled';
 import { NavLink } from 'react-router-dom';
 
+const imgStyle = {
+    height: "80px",
+    marginLeft: "-25px"
+}
+
+const textStyle = {
+    color: "white",
+    fontFamily: "Brush Script MT, cursive",
+    fontSize: "15px",
+    fontWeight: "bold",
+    textDecoration: "none",
+}
+
 function Topbar() {
   return (
     <div className='topbar'>
@@ -8,20 +21,25 @@ function Topbar() {
             <TopbarText>
                 <div className='topbar-left'>
                     <LeftRoutes>
-                        <NavLink to="/">Logo</NavLink>
+                        <NavLink to="/">
+                            <img 
+                            src={require('../images/context.gif')} 
+                            alt='Context' 
+                            style={imgStyle}/>
+                        </NavLink>
                     </LeftRoutes>
                     <LeftRoutes>
-                        <NavLink to="/home">Home</NavLink>
+                        <NavLink to="/home" style={textStyle}>Home</NavLink>
                     </LeftRoutes>
                     <LeftRoutes>
-                        <NavLink to="/create">Create</NavLink>
+                        <NavLink to="/create" style={textStyle}>Create</NavLink>
                     </LeftRoutes>
                     <LeftRoutes>
-                        <NavLink to="/review">Review</NavLink>
-                    </LeftRoutes>           
+                        <NavLink to="/review" style={textStyle}>Review</NavLink>
+                    </LeftRoutes>
                 </div>
-                <div className='topbar-right'>
-                    Right
+                <div className='topbar-right' style={textStyle}>
+                    User Profile
                 </div>
             </TopbarText>
         </TopbarWrapper>
